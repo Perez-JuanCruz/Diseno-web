@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 400px;
+    /* Lo hice un poco más alto para que luzca la foto */
+
+    /* ACÁ VA TU IMAGEN DE FONDO */
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    /* Hace que la imagen cubra todo el espacio */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    /* Sombreado para que las letras resalten sobre la foto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main,
+.contenedor-productos {
+    flex: 1;
+}
+
+/* Personalización del Navbar (sin usar utilidades de Bootstrap) */
+.mi-navbar {
+    background-color: #4a3b32;
+}
+
+.mi-navbar .nav-link,
+.mi-navbar .mi-brand {
+    color: #fff !important;
+}
+
+/* --- ESTILOS INDEX.HTML --- */
+.hero-section {
+    background-color: #c9a68a;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.info-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ESTILOS PRODUCTOS.HTML --- */
+.contenedor-productos {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-productos {
+    margin-bottom: 40px;
+}
+
+/* Uso de CSS Grid propio para las cards */
+.grilla-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card .card-img-top {
+    height: 250px;
+    /* Puedes achicar o agrandar este número si lo deseas */
+    object-fit: cover;
+    /* Evita que la foto se estire o se deforme */
+    width: 100%;
+}
+
+.mi-card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+.mi-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- ESTILOS CONTACTO.HTML --- */
+body {
+    background-color: #f8f5f2; /* Color crema suave para evitar el negro */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contacto-main {
+    display: flex;
+    justify-content: center;
+    /* Centra el formulario horizontalmente */
+    align-items: center;
+    /* Centra el formulario verticalmente */
+}
+
+.contacto-contenedor {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    /* Ancho máximo del formulario */
+    text-align: center;
+}
+
+.contacto-contenedor h1 {
+    margin-bottom: 10px;
+    color: #4a3b32;
+}
+
+.contacto-contenedor p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* Flexbox en el formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Separación entre los campos */
+    text-align: left;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.btn-enviar {
+    background-color: #c9a68a;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #4a3b32;
+}
+
+/* Footer común */
+.mi-footer {
+    background-color: #2b211c;
+    color: white;
+    padding: 20px;
+    /* Sin text-center de bootstrap, lo hacemos manual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+/* --- MEDIA QUERIES (ADAPTACIÓN A MOBILE) --- */
+
+@media (max-width: 768px) {
+    /* El proyecto se ve diferente en mobile  */
+
+    .hero-content h1 {
+        font-size: 2rem;
+        /* Hacemos ajustes para que no se vea "todo chiquitito"  */
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* Index: Pasamos de fila a columna en mobile */
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 90%;
+        /* Ocupa casi todo el ancho en mobile */
+    }
+
+    /* Productos: Pasamos de 4 columnas a 1 columna en mobile */
+    .grilla-cards {
+        grid-template-columns: 1fr;
+    }
+}
