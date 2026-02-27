@@ -118,14 +118,6 @@ main,
 }
 
 /* --- ESTILOS CONTACTO.HTML --- */
-body {
-    background-color: #f8f5f2; /* Color crema suave para evitar el negro */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 .contacto-main {
     display: flex;
     justify-content: center;
