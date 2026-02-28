@@ -6,14 +6,10 @@
 
 header {
     height: 400px;
-    /* Lo hice un poco más alto para que luzca la foto */
 
-    /* ACÁ VA TU IMAGEN DE FONDO */
     background-image: url("../img/fondo.jpg");
     background-size: cover;
-    /* Hace que la imagen cubra todo el espacio */
     background-position: center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
 
     display: flex;
@@ -23,7 +19,7 @@ header {
     text-align: center;
     color: white;
 
-    /* Sombreado para que las letras resalten sobre la foto */
+
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -41,7 +37,7 @@ main,
     flex: 1;
 }
 
-/* Personalización del Navbar (sin usar utilidades de Bootstrap) */
+/* Navbar */
 .mi-navbar {
     background-color: #4a3b32;
 }
@@ -51,8 +47,8 @@ main,
     color: #fff !important;
 }
 
-/* --- ESTILOS INDEX.HTML --- */
-.hero-section {
+/* Inicio */
+.banner-section {
     background-color: #c9a68a;
     height: 60vh;
     display: flex;
@@ -61,7 +57,7 @@ main,
     align-items: center;
 }
 
-.hero-content h1 {
+.banner-content h1 {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 20px;
@@ -82,7 +78,7 @@ main,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* --- ESTILOS PRODUCTOS.HTML --- */
+/* Productos */
 .contenedor-productos {
     padding: 50px 20px;
     max-width: 1200px;
@@ -93,7 +89,6 @@ main,
     margin-bottom: 40px;
 }
 
-/* Uso de CSS Grid propio para las cards */
 .grilla-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -102,9 +97,7 @@ main,
 
 .card .card-img-top {
     height: 250px;
-    /* Puedes achicar o agrandar este número si lo deseas */
     object-fit: cover;
-    /* Evita que la foto se estire o se deforme */
     width: 100%;
 }
 
@@ -117,13 +110,11 @@ main,
     transform: translateY(-5px);
 }
 
-/* --- ESTILOS CONTACTO.HTML --- */
+/* Contacto */
 .contacto-main {
     display: flex;
     justify-content: center;
-    /* Centra el formulario horizontalmente */
     align-items: center;
-    /* Centra el formulario verticalmente */
 }
 
 .contacto-contenedor {
@@ -133,7 +124,6 @@ main,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    /* Ancho máximo del formulario */
     text-align: center;
 }
 
@@ -147,12 +137,11 @@ main,
     color: #666;
 }
 
-/* Flexbox en el formulario */
+/* Formulario */
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* Separación entre los campos */
     text-align: left;
 }
 
@@ -181,12 +170,11 @@ main,
     background-color: #4a3b32;
 }
 
-/* Footer común */
-.mi-footer {
+/* Footer */
+footer {
     background-color: #2b211c;
     color: white;
     padding: 20px;
-    /* Sin text-center de bootstrap, lo hacemos manual */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,19 +182,16 @@ main,
 }
 
 
-/* --- MEDIA QUERIES (ADAPTACIÓN A MOBILE) --- */
+/* Adaptación a mobile */
 
 @media (max-width: 768px) {
-    /* El proyecto se ve diferente en mobile  */
 
     .hero-content h1 {
         font-size: 2rem;
-        /* Hacemos ajustes para que no se vea "todo chiquitito"  */
         text-align: center;
         padding: 0 15px;
     }
 
-    /* Index: Pasamos de fila a columna en mobile */
     .info-section {
         flex-direction: column;
         align-items: center;
@@ -214,10 +199,8 @@ main,
 
     .info-box {
         width: 90%;
-        /* Ocupa casi todo el ancho en mobile */
     }
 
-    /* Productos: Pasamos de 4 columnas a 1 columna en mobile */
     .grilla-cards {
         grid-template-columns: 1fr;
     }
