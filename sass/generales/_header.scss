@@ -1,0 +1,26 @@
+.mi-navbar {
+    background-color: $color-navbar;
+    
+    .nav-link, .mi-brand {
+        color: $color-blanco !important;
+        transition: color 0.3s;
+        
+        &:hover {
+            color: $color-primario !important;
+        }
+    }
+}
+
+header {
+    height: 400px;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex-columna;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $color-blanco;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}

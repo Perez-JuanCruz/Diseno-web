@@ -1,0 +1,28 @@
+.contenedor-productos {
+    flex: 1;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grilla-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+    .mi-card {
+        border: 1px solid #e0e0e0;
+        transition: transform 0.3s ease;
+        animation: aparecer 1s ease-out;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

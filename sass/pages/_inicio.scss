@@ -1,0 +1,30 @@
+.banner-section {
+    background-color: #c9a68a;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.info-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: aparecer 1s ease-out;
+}

@@ -1,0 +1,39 @@
+@import 'generales/variables';
+@import 'generales/mixins';
+@import 'generales/header';
+@import 'generales/footer';
+@import 'pages/inicio';
+@import 'pages/productos';
+@import 'pages/contacto';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $color-fondo;
+    color: $color-texto;
+    @include flex-columna;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main { 
+    flex: 1; 
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+
+        .info-box { width: 90%; }
+    }
+
+    .grilla-cards {
+        grid-template-columns: 1fr;
+    }
+}
