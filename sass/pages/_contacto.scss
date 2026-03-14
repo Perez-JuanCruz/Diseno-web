@@ -51,9 +51,9 @@
 .mapa-contacto {
     width: 100%;
     max-width: 500px;
-    height: 480px; // Le damos un alto similar al del formulario
+    height: 480px;
     border-radius: 8px;
-    overflow: hidden; // Esconde las esquinas cuadradas del iframe
+    overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
     animation: aparecer 1s ease-out;
     border: 3px solid $color-primario;
@@ -66,6 +66,6 @@
 
 @media (max-width: 768px) {
     .mapa-contacto {
-        display: none; // Esto hace que el mapa desaparezca por completo en celulares
+        display: none;
     }
 }

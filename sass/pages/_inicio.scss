@@ -1,5 +1,5 @@
 .banner-section {
-    background-color: #c9a68a;
+    background-color: $color-primario;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
 .banner-content h1 {
     font-size: 3rem;
-    color: #fff;
+    color: $color-blanco;
     margin-bottom: 20px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .info-box {
-    background-color: #fff;
+    background-color: $color-blanco;
     padding: 30px;
     border-radius: 8px;
     width: 45%;
