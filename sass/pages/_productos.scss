@@ -1,3 +1,5 @@
+@use '../generales/variables' as v;
+
 .contenedor-productos {
     flex: 1;
     padding: 50px 20px;
@@ -11,7 +13,7 @@
     gap: 20px;
     
     .mi-card {
-        border: 1px solid $color-blanco;
+        border: 1px solid v.$color-blanco;
         transition: transform 0.3s ease;
         animation: aparecer 1s ease-out;
         

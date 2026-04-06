@@ -1,6 +1,8 @@
+@use "variables" as v;
+
 footer {
-    background-color: $color-footer;
-    color: $color-blanco;
+    background-color: v.$color-footer;
+    color: v.$color-blanco;
     padding: 20px;
     display: flex;
     justify-content: center;

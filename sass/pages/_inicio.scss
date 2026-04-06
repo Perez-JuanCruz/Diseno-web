@@ -1,16 +1,35 @@
+@use '../generales/variables' as v;
+@use '../generales/mixins' as m;
+
 .banner-section {
-    background-color: $color-primario;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
+    height: 400px;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include m.flex-columna;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
-
-.banner-content h1 {
-    font-size: 3rem;
-    color: $color-blanco;
-    margin-bottom: 20px;
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    
+    h1 {
+        font-size: 3rem;
+        color: v.$color-blanco;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        color: v.$color-blanco;
+        font-size: 1.2rem;
+    }
 }
 
 .info-section {
@@ -21,7 +40,7 @@
 }
 
 .info-box {
-    background-color: $color-blanco;
+    background-color: v.$color-blanco;
     padding: 30px;
     border-radius: 8px;
     width: 45%;
